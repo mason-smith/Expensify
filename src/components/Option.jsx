@@ -2,8 +2,8 @@ import React from 'react'
 
 const Option = (props) => {
   return (
-    <ul className="collection">
-      <li className="collection-item">{ props.optionText } 
+    <ul>
+      <li>{ props.optionText } 
         <button 
           onClick={(e) => {
             props.handleDeleteOption(props.optionText);

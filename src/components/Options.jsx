@@ -16,12 +16,7 @@ const Options = (props) => {
       
       <Option />
       
-      <button 
-        className="
-          purple darken-4
-          waves-effect 
-          waves-light 
-          btn" 
+      <button
         onClick={props.handleDeleteOptions}>
           Remove All
       </button>
