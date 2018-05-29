@@ -1,8 +1,7 @@
 import React from 'react';
 import Option from './Option.jsx';
 
-const Options = (props) => {
-  return (
+const Options = (props) => (
     <div>
       { 
         props.options.map((option) => (
@@ -21,7 +20,5 @@ const Options = (props) => {
           Remove All
       </button>
     </div>
-  )
-}
-
+)
 export default Options;
