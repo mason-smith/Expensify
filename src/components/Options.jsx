@@ -3,6 +3,13 @@ import Option from './Option.jsx';
 
 const Options = (props) => (
     <div>
+      <button
+        className="button button--link"
+        onClick={props.handleDeleteOptions}
+      >
+          Remove All
+      </button>
+      {props.options.length === 0 && <p>Please add an option to get started!</p> }
       { 
         props.options.map((option) => (
           < Option 
@@ -14,11 +21,6 @@ const Options = (props) => (
       }
       
       <Option />
-      
-      <button
-        onClick={props.handleDeleteOptions}>
-          Remove All
-      </button>
     </div>
 )
 export default Options;
