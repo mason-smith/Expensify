@@ -1,6 +1,5 @@
 body {
   font-family: $primary-font, Helvetica, Arial, sans-serif;
-  background: $dark-blue;
 }
 
 button {
@@ -9,4 +8,8 @@ button {
 
 button:disabled {
   cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
 }
