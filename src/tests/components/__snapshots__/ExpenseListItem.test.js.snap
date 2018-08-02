@@ -9,13 +9,15 @@ exports[`should render ExpenseListItem with expenses 1`] = `
       exact={true}
       to="/edit/undefined"
     >
-        
+       
        
     </NavLink>
   </h3>
   <p>
      
-     - 
+    $0.00
+    -
+    December 31st, 1969
      
   </p>
 </div>
