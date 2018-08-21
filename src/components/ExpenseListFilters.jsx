@@ -7,7 +7,7 @@ import {
   sortByAmount,
   setStartDate,
   setEndDate
-} from "../actions/filters";
+} from "../actions/filters.jsx";
 
 export class ExpenseListFilters extends React.Component {
   state = {
