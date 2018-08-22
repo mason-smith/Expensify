@@ -46,7 +46,7 @@ test("should add expense to database and store", done => {
     createdAt: 68723484
   };
   store.dispatch(startAddExpense(expenseData)).then(() => {
-    expect(1).toBe(1);
+    expect(1).toBe(2);
     done();
   });
 });
