@@ -13,7 +13,7 @@ module.exports = env => {
     module: {
       rules: [{
           loader: 'babel-loader',
-          test: /\.jsx$/,
+          test: /\.jsx?$/,
           exclude: /node_modules/
         },
         {
