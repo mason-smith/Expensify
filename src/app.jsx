@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import AppRouter, { history } from "./routers/AppRouter.jsx";
 import configureStore from "./store/configureStore.jsx";
 import { startSetExpenses } from "./actions/expenses.jsx";
-import { setTextFilter } from "./actions/filters.jsx";
+import { login, logout } from "./actions/auth.jsx";
 import { getVisibleExpenses } from "./selectors/expenses.jsx";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
@@ -29,6 +29,7 @@ ReactDOM.render(<p>LOADING . . .</p>, document.getElementById("app"));
 
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
+    store.dispatch(login(user.uid));
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
       if (history.location.pathname === "/") {
@@ -36,6 +37,7 @@ firebase.auth().onAuthStateChanged(user => {
       }
     });
   } else {
+    store.dispatch(logout());
     renderApp();
     history.push("/");
   }
