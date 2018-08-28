@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import ExpenseForm from "./ExpenseForm.jsx";
-import { editExpense, startRemoveExpense } from "../actions/expenses.jsx";
+import { startEditExpense, startRemoveExpense } from "../actions/expenses.jsx";
 
 export class EditExpensePage extends React.Component {
   onSubmit = expense => {
-    this.props.editExpense(this.props.expense.id, expense);
+    this.props.startEditExpense(this.props.expense.id, expense);
     this.props.history.push("/");
   };
   onRemove = () => {
