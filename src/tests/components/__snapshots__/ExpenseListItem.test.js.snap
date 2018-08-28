@@ -3,15 +3,13 @@
 exports[`should render ExpenseListItem with expenses 1`] = `
 <div>
   <h3>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      exact={true}
+    <Link
+      replace={false}
       to="/edit/undefined"
     >
        
        
-    </NavLink>
+    </Link>
   </h3>
   <p>
      
