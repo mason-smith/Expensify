@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { startLogin } from "../actions/auth.jsx";
 
@@ -9,11 +9,8 @@ export const LoginPage = ({ startLogin }) => (
 );
 
 const mapDispatchToProps = dispatch => ({
-  startLogin: () => {
-    dispatch(startLogin());
-  }
+  startLogin: () => dispatch(startLogin())
 });
-
 export default connect(
   undefined,
   mapDispatchToProps
