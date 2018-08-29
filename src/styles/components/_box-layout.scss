@@ -2,20 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(70deg, $s-light 30%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, $p-dark 60%, $primary 60%, $s-dark 60%);
+  // background: linear-gradient(70deg, $s-light 30%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, $p-dark 60%, $primary 60%, $secondary 60%);
   background-size: cover;
   height: 100vh;
   width: 100vw;
 }
 
 .box-layout__box {
-  background: fade-out($color: #fff, $amount: .15);
-  border-radius: 5px;
+  // background: fade-out($color: #fff, $amount: .15);
+  border-radius: 10px;
   text-align: center;
   padding: $m-size;
-  box-shadow: $md-shadow;
+  // box-shadow: $xs-shadow;
 }
 
 .box-layout__title {
   margin: 0;
+  padding-bottom: $m-size;
+}
+
+.box-layout__subtitle {
+  padding-bottom: $m-size;
 }

@@ -1,0 +1,21 @@
+.header {
+  margin: 0;
+  box-shadow: $sm-shadow;
+  background: $primary;
+}
+
+.header__content {
+  padding: $xs-size 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  color: $dark-grey;
+  text-decoration: none;
+
+  h1 {
+    margin: 0;
+  }
+}

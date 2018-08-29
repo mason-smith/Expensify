@@ -1,6 +1,5 @@
 .btn {
   border: 0px solid;
-  border-radius: 25px;
   background: transparent;
   padding: 1rem;
   box-shadow: $sm-shadow;
@@ -10,4 +9,19 @@
 .btn__login {
   color: #FFF;
   background: $secondary;
+}
+
+.btn__ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.btn__ripple:hover {
+  background: $p-dark radial-gradient(circle, transparent 1%, $p-dark 1%) center/15000%;
+}
+
+.btn__ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
 }
