@@ -1,0 +1,13 @@
+.btn {
+  border: 0px solid;
+  border-radius: 25px;
+  background: transparent;
+  padding: 1rem;
+  box-shadow: $sm-shadow;
+  text-transform: uppercase;
+}
+
+.btn__login {
+  color: #FFF;
+  background: $secondary;
+}
