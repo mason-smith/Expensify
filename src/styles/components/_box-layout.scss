@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $primary;
+  color: #FFF;
   // background: linear-gradient(70deg, $s-light 30%, rgba(0, 0, 0, 0) 30%), linear-gradient(110deg, $p-dark 60%, $primary 60%, $secondary 60%);
   background-size: cover;
   height: 100vh;

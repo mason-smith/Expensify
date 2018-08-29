@@ -11,7 +11,9 @@ export const Header = ({ startLogout }) => (
           {" "}
           <h1>Expensify</h1>
         </Link>
-        <button onClick={startLogout}>Logout</button>
+        <button className="header__logout" onClick={startLogout}>
+          Logout
+        </button>
       </div>
     </div>
   </header>

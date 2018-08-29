@@ -25,3 +25,41 @@
   background-size: 100%;
   transition: background 0s;
 }
+
+.fab {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  font-size: 3rem;
+  font-weight: 500;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  outline: 0;
+  width: 56px;
+  height: 56px;
+  background-color: $secondary;
+  border-radius: 50%;
+  margin-top: 1.25rem;
+  right: 7%;
+  box-shadow: $sm-shadow;
+}
+
+.fab__content {
+  display: flex;
+  align-items: center;
+  border-radius: inherit;
+  color: inherit;
+  flex: 1 1 auto;
+  justify-content: center;
+  position: relative;
+  white-space: nowrap;
+  width: inherit;
+}
+
+.fab-link {
+  text-decoration: none;
+  color: #FFF;
+}

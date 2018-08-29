@@ -2,6 +2,7 @@
   margin: 0;
   box-shadow: $sm-shadow;
   background: $primary;
+  color: #FFF;
 }
 
 .header__content {
@@ -12,10 +13,14 @@
 }
 
 .header__title {
-  color: $dark-grey;
+  color: #fff;
   text-decoration: none;
 
   h1 {
     margin: 0;
   }
+}
+
+.header__logout {
+  color: #FFF;
 }
