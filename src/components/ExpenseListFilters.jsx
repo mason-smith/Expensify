@@ -10,9 +10,6 @@ import {
 } from "../actions/filters.jsx";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import InputLabel from "@material-ui/core/InputLabel";
 
 export class ExpenseListFilters extends React.Component {
   state = {
@@ -48,21 +45,19 @@ export class ExpenseListFilters extends React.Component {
               onChange={this.onTextChange}
             />
           </div>
-          {/* <FormControl>
-            <InputLabel htmlFor="filter">Filter by: </InputLabel>
-            <Select
-              value={this.state.sort}
-              onChange={this.onSortChange}
-              inputProps={{
-                name: "sort",
-                id: "filter"
-              }}
-            >
-              <MenuItem value="date">Filter by Date</MenuItem>
-              <MenuItem value="amount">Filter by Amount</MenuItem>
-            </Select>
-          </FormControl> */}
-          <div className="input-group__item">
+          <TextField
+            select
+            label="Filter"
+            value={this.state.sort}
+            onChange={this.onSortChange}
+            helperText="Select a filter for your expenses"
+            margin="normal"
+          >
+            <MenuItem value="date">Filter by Date</MenuItem>
+            <MenuItem value="amount">Filter by Amount</MenuItem>
+          </TextField>
+
+          {/* <div className="input-group__item">
             <select
               className="select-text"
               value={this.props.filters.sortBy}
@@ -71,7 +66,7 @@ export class ExpenseListFilters extends React.Component {
               <option value="date">Filter by Date</option>
               <option value="amount">Filter by Amount</option>
             </select>
-          </div>
+          </div> */}
           <div className="input-group__item">
             <DateRangePicker
               startDate={this.props.filters.startDate}

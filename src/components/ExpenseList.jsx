@@ -3,19 +3,18 @@ import { connect } from "react-redux";
 import ExpenseListItem from "./ExpenseListItem.jsx";
 import selectExpenses from "../selectors/expenses.jsx";
 import List from "@material-ui/core/List";
+import Paper from "@material-ui/core/Paper";
 
 export const ExpenseList = props => (
-  <div className="content-container">
-    <List component="nav">
-      {props.expenses.length === 0 ? (
-        <p>No Expenses</p>
-      ) : (
-        props.expenses.map(expense => (
-          <ExpenseListItem key={expense.id} {...expense} />
-        ))
-      )}
-    </List>
-  </div>
+  <List className="input-section" component="nav">
+    {props.expenses.length === 0 ? (
+      <p>No Expenses</p>
+    ) : (
+      props.expenses.map(expense => (
+        <ExpenseListItem key={expense.id} {...expense} />
+      ))
+    )}
+  </List>
 );
 
 const mapStateToProps = state => {
