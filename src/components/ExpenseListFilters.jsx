@@ -8,9 +8,15 @@ import {
   setStartDate,
   setEndDate
 } from "../actions/filters.jsx";
+import MenuItem from "@material-ui/core/MenuItem";
+import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
 
 export class ExpenseListFilters extends React.Component {
   state = {
+    sort: "",
     calendarFocused: null
   };
   onDatesChange = ({ startDate, endDate }) => {
@@ -32,25 +38,38 @@ export class ExpenseListFilters extends React.Component {
   };
   render() {
     return (
-      <div className="content-container">
-        <div className="input-group">
+      <div className="input-section">
+        <div className="content-container">
           <div className="input-group__item">
-            <input
-              type="text"
-              className="text-input"
-              placeholder="Search expenses"
+            <TextField
+              label="Search your Expenses"
+              margin="normal"
               value={this.props.filters.text}
               onChange={this.onTextChange}
             />
           </div>
+          {/* <FormControl>
+            <InputLabel htmlFor="filter">Filter by: </InputLabel>
+            <Select
+              value={this.state.sort}
+              onChange={this.onSortChange}
+              inputProps={{
+                name: "sort",
+                id: "filter"
+              }}
+            >
+              <MenuItem value="date">Filter by Date</MenuItem>
+              <MenuItem value="amount">Filter by Amount</MenuItem>
+            </Select>
+          </FormControl> */}
           <div className="input-group__item">
             <select
-              className="select"
+              className="select-text"
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
-              <option value="date">Date</option>
-              <option value="amount">Amount</option>
+              <option value="date">Filter by Date</option>
+              <option value="amount">Filter by Amount</option>
             </select>
           </div>
           <div className="input-group__item">

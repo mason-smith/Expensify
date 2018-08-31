@@ -4,6 +4,7 @@ import numeral from "numeral";
 import selectExpenses from "../selectors/expenses.jsx";
 import selectExpensesTotal from "../selectors/expenses-total.jsx";
 import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
   const expenseWord = expenseCount === 1 ? "expense" : "expenses";
@@ -15,15 +16,9 @@ export const ExpensesSummary = ({ expenseCount, expensesTotal }) => {
           Viewing <span>{expenseCount}</span> {expenseWord} totalling{" "}
           <span>{formattedExpensesTotal}</span>
         </h1>
-        <div className="page-header__actions">
-          <div className="fab">
-            <div className="fab__content">
-              <Link className="fab-link" to="/create">
-                +
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Link to="/create" className="fab" variant="fab" aria-label="Add">
+          <i className="fab--icon material-icons">add</i>
+        </Link>
       </div>
     </div>
   );

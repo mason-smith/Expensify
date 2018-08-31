@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $primary-font, Helvetica, Arial, sans-serif;
   color: $dark-grey;
-  background: #F7F7F7;
+  // background: #F7F7F7;
 }
 
 button {
