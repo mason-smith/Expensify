@@ -15,3 +15,15 @@
 .fab--icon {
   color: white
 }
+
+.login__button {
+  background: $secondary;
+  border: 2px solid $secondary;
+  color: #FFF;
+  padding: $s-size;
+  transition: .5s ease;
+
+  &:hover {
+    background: transparent;
+  }
+}
